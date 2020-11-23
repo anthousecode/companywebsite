@@ -1,0 +1,55 @@
+.mainnavbarblock {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  &__topblock {
+    height: 35px;
+    background-color: #73bcb7;
+    &_lang span,
+    &_forsign span {
+      cursor: pointer;
+    }
+    &_lang_chosen{
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  &__bottomblock {
+    height: 106px;
+    background-color: #fff;
+    &_logotitle {
+      font-size: 24px;
+      font-weight: 600;
+      cursor: pointer;
+    padding-left: 70px;
+    font-size: 32px;
+    padding-bottom: 8px;
+      span:first-child {
+        color: #73bcb7;
+      }
+      &_vertline {
+        display: inline-block;
+        width: 4px;
+        height: 36px;
+        background-color: #000;
+        align-self: center;
+        display: flex;
+        margin-left: 2px;
+        span:last-child{
+          background-color:  #73bcb7;
+        }
+      }
+    }
+    &_navlinkslist {
+      list-style: none;
+      li {
+        margin-left: 28px;
+        a {
+          color: #6e6e6e;
+          text-decoration: none;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
