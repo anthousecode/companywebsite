@@ -1,11 +1,19 @@
+import { useEffect } from 'react'
 import MainLayout from "../../layouts/MainLayout";
 import TopPanorama from "../../components/homepageview/TopPanorama";
 import Features from "../../components/homepageview/Features";
 import OurProjects from "../../components/homepageview/OurProjects";
 import BottomPanorama from "../../components/homepageview/BottomPanorama";
+import { onLoadData } from "../actions";
 import { connect } from "react-redux";
 
-const Home = ({ homeData }) => {
+const Home = ({ homeData, onLoadData }) => {
+  useEffect(() => {
+    if (homeData) {
+      onLoadData('/', homeData.lang);
+    } else onLoadData('/', 'en');
+  }, [])
+  if (!homeData) return null;
   return (
     <MainLayout title="Home Page">
       <div className="row">
@@ -28,4 +36,6 @@ const mapState = (state) => {
   };
 };
 
-export default connect(mapState)(Home);
+const mapDispatch = { onLoadData };
+
+export default connect(mapState, mapDispatch)(Home);

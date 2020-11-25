@@ -15,7 +15,7 @@ const onMoveCarousel = (direction, block, projectscarouselwrap) => {
   const maxRight = wrapperWidth - blockWidth * 3;
   if (!direction) {
     block.current.style.right = 0 + "px";
-  } else if (direction === "arrowleftcarousel" && wrapperRight <= blockWidth) {
+  } else if (direction === "arrowleftcarousel" && Math.trunc(wrapperRight) <= 0) {
     return;
   } else if (direction === "arrowrightcarousel" && maxRight <= wrapperRight) {
     return;
