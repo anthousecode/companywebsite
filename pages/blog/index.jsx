@@ -1,5 +1,4 @@
 import MainLayout from "../../layouts/MainLayout";
-
 const Blog = () => {
   return (
     <MainLayout title="Blog Page">

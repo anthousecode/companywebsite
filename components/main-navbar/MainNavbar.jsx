@@ -15,11 +15,11 @@ const MainNavbar = ({ layoutData, onLoadData }) => {
     Router.push(route);
   };
   return (
-    <header className={`${styles.mainnavbarblock} row mx-0`}>
-      <div className="col px-0">
-        <div className="row mx-0">
+    <header className={`${styles.mainnavbarblock} row`}>
+      <div className="col">
+        <div className="row">
           <section
-            className={`${styles.mainnavbarblock__topblock} d-flex justify-content-end align-items-center text-light pr-5 col pl-0`}
+            className={`${styles.mainnavbarblock__topblock} d-flex justify-content-end align-items-center text-light pr-5 col`}
           >
             <div
               className={`${styles.mainnavbarblock__topblock_lang} mr-4`}
@@ -27,12 +27,12 @@ const MainNavbar = ({ layoutData, onLoadData }) => {
             >
               <span
                 className={`${
-                  layoutData.lang === "ua" &&
+                  layoutData.lang === "en" &&
                   styles.mainnavbarblock__topblock_lang_chosen
                 } d-inline-block mx-1`}
-                data-lang="ua"
+                data-lang="en"
               >
-                Укр
+                Eng
               </span>
               <img src="/images/common/glob.svg" alt="glob" />
               <span
@@ -43,16 +43,6 @@ const MainNavbar = ({ layoutData, onLoadData }) => {
                 data-lang="ru"
               >
                 Рус
-              </span>
-              <img src="/images/common/glob.svg" alt="glob" />
-              <span
-                className={`${
-                  layoutData.lang === "en" &&
-                  styles.mainnavbarblock__topblock_lang_chosen
-                } d-inline-block mx-1`}
-                data-lang="en"
-              >
-                Eng
               </span>
             </div>
             <div className={styles.mainnavbarblock__topblock_forsign}>

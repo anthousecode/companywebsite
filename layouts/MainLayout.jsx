@@ -8,7 +8,7 @@ import styles from "./styles.module.scss";
 const MainLayout = ({ children, title = "Web-site" }) => {
   return (
     <Provider store={store}>
-      <div className={`${styles.wrapper} container-fluid m-0 p-0`}>
+      <div className={`${styles.wrapper} container-fluid`}>
         <Head>
           <title>{title} | AntHouse</title>
         </Head>

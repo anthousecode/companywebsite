@@ -40,11 +40,6 @@ const reducer = (state = initialState, action) => {
           item.isShown = true;
         } else item.isShown = false;
       });
-      updatedCertainPageData.ua.leadership.leaders.forEach((item) => {
-        if (item.name === action.payload) {
-          item.isShown = true;
-        } else item.isShown = false;
-      });
       const updatedcertainLayoutLangTextData =
         updatedCertainPageData[state.certainLangPageData.lang];
       return {

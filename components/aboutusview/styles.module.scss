@@ -1,48 +1,3 @@
-.toppanorama__img {
-  width: 100%;
-  height: 430px;
-}
-
-.newsandprocess {
-  padding: 70px 0;
-  min-height: 356px;
-  &__newsblock {
-    img {
-      width: 100%;
-    }
-  }
-  &__processblock {
-    padding: 10px 0;
-    &_lebelwrapp {
-      width: fit-content;
-    }
-    &_lebel {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      &_text {
-        margin-bottom: 0;
-        margin-right: 10px;
-        font-size: 14px;
-        font-weight: bold;
-      }
-      &_arrow {
-        width: 10px;
-        height: 8px;
-      }
-    }
-    &_underline {
-      height: 5px;
-      background-color: #73bcb7;
-    }
-    &_openedblock {
-      background-color: #f6f6f6;
-      padding: 8px 18px;
-      margin-top: 16px;
-    }
-  }
-}
-
 .leadership {
   background-color: #f6f6f6;
   padding-bottom: 40px;
@@ -177,6 +132,23 @@
       }
       &_ocupation {
         font-size: 14px;
+      }
+      .imgwrapper {
+        position: relative;
+        .persondata {
+          position: absolute;
+          left: -50%;
+          background-color: #fff;
+          width: 300px;
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid #000;
+          z-index: 100;
+          display: none;
+        }
+      }
+      .imgwrapper:hover .persondata {
+        display: block;
       }
     }
     &_person:last-child {
