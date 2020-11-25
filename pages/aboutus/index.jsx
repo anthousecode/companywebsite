@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import MainLayout from "../../layouts/MainLayout";
-import TopAboutUsPanorama from "../../components/aboutusview/TopPanorama";
-import NewsAndProcess from "../../components/aboutusview/NewsAndProcess";
+import Description from "../../components/aboutusview/Description";
 import Leadership from "../../components/aboutusview/Leadership";
 import OurTeam from "../../components/aboutusview/OurTeam";
 import { onLoadData } from "../actions";
+import styles from "./styles.module.scss";
 import store from "../../store";
 
 const AboutUs = () => {
@@ -21,20 +21,32 @@ const AboutUs = () => {
     setData(language);
   }, [data]);
 
-  if (
-    !store.getState().certainPageData.certainLangPageData ||
-    !store.getState().certainPageData.certainLangPageData.proсesses
-  ) {
+  if (!store.getState().certainPageData.certainLangPageData) {
     return null;
   }
-  const { proсesses } = store.getState().certainPageData.certainLangPageData;
+  const topTileData = store.getState().certainPageData.certainLangPageData;
+  const { description } = store.getState().certainPageData.certainLangPageData;
   const { ourteam } = store.getState().certainPageData.certainLangPageData;
   return (
     <MainLayout title="About Us Page">
       <div className="row">
         <div className="col">
-          <TopAboutUsPanorama />
-          <NewsAndProcess data={proсesses} />
+          <div
+            className={`${styles.toppanorama} row d-flex justify-content-center align-items-end`}
+          >
+            <div className="col-9">
+              <div className={styles.toppanorama__titleblock}>
+                <h2 className={styles.toppanorama__titleblock_title}>
+                  {topTileData.toptitle}
+                </h2>
+                <div className={styles.toppanorama__titleblock_underline}></div>
+              </div>
+              <p className={styles.toppanorama__text}>
+                {topTileData.topdescript}
+              </p>
+            </div>
+          </div>
+          <Description data={description} />
           <Leadership />
           <OurTeam data={ourteam} />
         </div>

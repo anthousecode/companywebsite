@@ -9,7 +9,7 @@ const MainNavigation = (props) => {
   const { route } = useRouter();
   return (
     <div
-      className={`${styles.mainnavbarblock__bottomblock} d-flex justify-content-center align-items-center bg-light row`}
+      className={`${styles.mainnavbarblock__bottomblock} d-flex justify-content-center align-items-center bg-light row mx-0`}
     >
       <nav className="d-flex justify-content-between align-items-center col-9">
         <Link href="/">

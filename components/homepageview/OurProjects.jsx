@@ -31,7 +31,7 @@ const OurProjects = ({ data }) => {
       <div className="col">
         <HeaderRow title={data.title} text={data.underTitleText} />
         <div className="row d-flex justify-content-center">
-          <div className="col-9 px-0">
+          <div className="col-9">
             <section
               className={styles.projectscarousel}
               ref={projectscarouselwrap}

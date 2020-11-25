@@ -3,6 +3,7 @@ import DevsRow from "./DevsRow";
 import styles from "./styles.module.scss";
 
 const OurTeam = ({ data }) => {
+  if (!data) return null;
   return (
     <div className={`${styles.ourteam} row d-flex justify-content-center`}>
       <div className="col">

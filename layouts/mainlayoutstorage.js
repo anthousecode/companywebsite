@@ -1,41 +1,4 @@
 export const layoutTextData = {
-  ua: {
-    navlinks: [
-      {
-        title: "Про нас",
-        path: "/aboutus",
-      },
-      {
-        title: "Блог",
-        path: "/blog",
-      },
-      {
-        title: `Проекти ${"\u0026"} Продукти`,
-        path: "/projectsandproducts",
-      },
-      {
-        title: "Кар'єра",
-        path: "/career",
-      },
-      {
-        title: "Зв'язатись із нами",
-        path: "/contuctus",
-      },
-    ],
-    singin: "Ввійти",
-    lang: "ua",
-    titles: {
-      cntUs: "Зв'язатись із нами",
-      abUs: "Про нас",
-    },
-    place: "Україна, Харків",
-    mainText:
-      "Вже давно відомо, що читабельний зміст буде заважати зосередитись людині, яка оцінює композицію сторінки. Сенс використання Lorem Ipsum полягає в тому, що цей текст має більш-менш нормальне розподілення.",
-    protectText: "Усі права захищені",
-    phone1: "(067) 487 35 14",
-    phone2: "(067) 536 78 95",
-    email: "itant.house@gmail.com",
-  },
   ru: {
     navlinks: [
       {
@@ -43,12 +6,12 @@ export const layoutTextData = {
         path: "/aboutus",
       },
       {
-        title: "Блог",
-        path: "/blog",
-      },
-      {
         title: `Проекты ${"\u0026"} Продукты`,
         path: "/projectsandproducts",
+      },
+      {
+        title: "Блог",
+        path: "/blog",
       },
       {
         title: "Карьера",
@@ -80,12 +43,12 @@ export const layoutTextData = {
         path: "/aboutus",
       },
       {
-        title: "Blog",
-        path: "/blog",
-      },
-      {
         title: `Projects ${"\u0026"} Products`,
         path: "/projectsandproducts",
+      },
+      {
+        title: "Blog",
+        path: "/blog",
       },
       {
         title: "Career",
