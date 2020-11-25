@@ -1,7 +1,12 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "./styles.module.scss";
+import { connect } from "react-redux";
+import { onLoadData } from "../../pages/actions";
 
-const MainNavigation = ({ navlinks }) => {
+const MainNavigation = (props) => {
+  const { navlinks, lang, onLoadData } = props;
+  const { route } = useRouter();
   return (
     <div
       className={`${styles.mainnavbarblock__bottomblock} d-flex justify-content-center align-items-center bg-light row`}
@@ -10,6 +15,7 @@ const MainNavigation = ({ navlinks }) => {
         <Link href="/">
           <div
             className={`${styles.mainnavbarblock__bottomblock_logotitle} d-flex justify-content-center`}
+            onClick={() => onLoadData("/", lang)}
           >
             <span>Ant</span>
             <div
@@ -26,7 +32,17 @@ const MainNavigation = ({ navlinks }) => {
         >
           {navlinks.map((item, index) => (
             <li key={index}>
-              <Link href={item.path}>{item.title}</Link>
+              <Link href={item.path}>
+                <a
+                  className={
+                    item.path === route
+                      ? styles.chosenlink
+                      : styles.mainnavbarblock__bottomblock_navlinkslist_link
+                  }
+                >
+                  {item.title}
+                </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -34,4 +50,7 @@ const MainNavigation = ({ navlinks }) => {
     </div>
   );
 };
-export default MainNavigation;
+
+const mapDispatch = { onLoadData };
+
+export default connect(null, mapDispatch)(MainNavigation);

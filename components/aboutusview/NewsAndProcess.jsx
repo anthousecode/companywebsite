@@ -1,6 +1,7 @@
+import SelectBlock from "./SelectBlock";
 import styles from "./styles.module.scss";
 
-const NewsAndProcess = () => {
+const NewsAndProcess = ({ data }) => {
   return (
     <div
       className={`${styles.newsandprocess} row d-flex justify-content-center`}
@@ -17,14 +18,9 @@ const NewsAndProcess = () => {
           </aside>
 
           <aside className="col pr-0">
-              <section className={styles.newsandprocess__processblock}>
-                <div>
-                    <p>How we work</p>
-                    <img src="images/aboutus/selectarrow.png" alt="selectarrow"/>
-                </div>
-                <div></div>
-                <div></div>
-              </section>
+            {data.map((item, index) => (
+              <SelectBlock key={index} data={item} />
+            ))}
           </aside>
         </div>
       </div>

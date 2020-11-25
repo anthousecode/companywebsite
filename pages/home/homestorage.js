@@ -24,6 +24,7 @@ const carouselImages = [
 
 export default {
   ua: {
+    lang: 'ua',
     features: {
       title: "Наші особливості",
       underTitleText: "Створюйте функції для своїх потреб",
@@ -83,6 +84,7 @@ export default {
     },
   },
   ru: {
+    lang: 'ru',
     features: {
       title: "Наши особенности",
       underTitleText: "Создавайте функции для ваших нужд",
@@ -142,6 +144,7 @@ export default {
     },
   },
   en: {
+    lang: 'en',
     features: {
       title: "Our features",
       underTitleText: "Create features for your needs",

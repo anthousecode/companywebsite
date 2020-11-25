@@ -1,12 +1,18 @@
+import { useState } from "react";
+import Router, { useRouter } from 'next/router'
 import MainNavigation from "./MainNavigation";
 import { connect } from "react-redux";
-import { onChangeLang } from "../../pages/actions";
+import { onLoadData } from "../../pages/actions";
 import styles from "./styles.module.scss";
 
-const MainNavbar = ({ layoutData, onChangeLang }) => {
+const MainNavbar = ({ layoutData, onLoadData }) => {
+  const { route } = useRouter();
+  const [lang, setLang] = useState(layoutData.lang);
   const onChoiceLang = (e) => {
     if (!e.target.dataset.lang) return;
-    onChangeLang(e.target.dataset.lang)
+    onLoadData(route, e.target.dataset.lang);
+    setLang(e.target.dataset.lang);
+    Router.push(route);
   };
   return (
     <header className={`${styles.mainnavbarblock} row mx-0`}>
@@ -54,7 +60,7 @@ const MainNavbar = ({ layoutData, onChangeLang }) => {
             </div>
           </section>
         </div>
-        <MainNavigation navlinks={layoutData.navlinks} />
+        <MainNavigation navlinks={layoutData.navlinks} lang={lang} />
       </div>
     </header>
   );
@@ -66,6 +72,6 @@ const mapState = (state) => {
   };
 };
 
-const mapDispatch = { onChangeLang };
+const mapDispatch = { onLoadData };
 
 export default connect(mapState, mapDispatch)(MainNavbar);

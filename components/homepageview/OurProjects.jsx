@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HeaderRow from "./HeaderRow";
+import HeaderRow from "../common/HeaderRow";
 import styles from "./styles.module.scss";
 import onMoveCarousel from "../../helpers/onMoveCarousel";
 

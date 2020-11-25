@@ -1,5 +1,5 @@
 import FeatureLinkBlock from "./FetureLinkBlock";
-import HeaderRow from "./HeaderRow";
+import HeaderRow from "../common/HeaderRow";
 
 const Features = ({ data }) => {
   return (
