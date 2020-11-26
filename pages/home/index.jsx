@@ -14,7 +14,6 @@ const Home = ({ homeData, onLoadData }) => {
     } else onLoadData("/", "en");
   }, []);
   if (!homeData) return null;
-  console.log(homeData);
   return (
     <MainLayout title="Home Page">
       <div className="row">

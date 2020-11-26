@@ -1,0 +1,42 @@
+.blogcarousel {
+  padding: 0 0 70px 0;
+  &__blogblock {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 0 0 20px 0;
+    &_title {
+      display: inline-block;
+      width: fit-content;
+      margin-bottom: 18px;
+      p {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 2px;
+      }
+      div {
+        height: 5px;
+        background-color: #86bd62;
+      }
+    }
+    &_text {
+      font-size: 15px;
+      margin: 0 0 18px 0;
+    }
+    &_btn {
+      display: flex;
+      width: fit-content;
+      align-items: center;
+      height: 16px;
+      font-size: 16px;
+      text-transform: uppercase;
+      color: #39bfb8;
+      cursor: pointer;
+      p {
+        margin: 0 5px 0 0;
+        font-weight: bold;
+      }
+      img {
+        height: 16px;
+      }
+    }
+  }
+}
