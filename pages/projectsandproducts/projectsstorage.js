@@ -37,10 +37,10 @@ export default {
       [
         {
           img:
-            "https://lh3.googleusercontent.com/proxy/6vpFCkSZqCZXea_YcTAiwVL4-xPd58OPWwBNO35_BP9MY4Ys5giBJz42ZzeSNzfpctzDrWzhP1IaySJQoYfOW-EC3Eq9oc6ZClDOC8RuSRw13G8AX_ZyJaRGffvUbdKYsLLx1eDY3x5y_xXPEvTbhhAMFvx7cuxMmXdpd3ZgU-3vlxm2Ve2ib4XbTHS0u7WmGqjnu2tUDRw5axdUBJuwtRO_bC3sdrsVlQoZKr7AphV3Lj1l14vQ5RBRrNE3uDC4gfOsONw9UA",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVA4snwGwUZ_G0pRBe1UlyH74_v1VVbkXdxA&usqp=CAU",
           subtitle: "Дизайны",
           title:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti.",
+            "Давно выяснено, что при оценке нужен текст.",
           text:
             "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв.",
           btnText: "Читать больше",
@@ -135,7 +135,7 @@ export default {
       [
         {
           img:
-            "https://lh3.googleusercontent.com/proxy/6vpFCkSZqCZXea_YcTAiwVL4-xPd58OPWwBNO35_BP9MY4Ys5giBJz42ZzeSNzfpctzDrWzhP1IaySJQoYfOW-EC3Eq9oc6ZClDOC8RuSRw13G8AX_ZyJaRGffvUbdKYsLLx1eDY3x5y_xXPEvTbhhAMFvx7cuxMmXdpd3ZgU-3vlxm2Ve2ib4XbTHS0u7WmGqjnu2tUDRw5axdUBJuwtRO_bC3sdrsVlQoZKr7AphV3Lj1l14vQ5RBRrNE3uDC4gfOsONw9UA",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVA4snwGwUZ_G0pRBe1UlyH74_v1VVbkXdxA&usqp=CAU",
           subtitle: "Designs",
           title:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti.",
