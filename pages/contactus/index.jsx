@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import MainLayout from "../../layouts/MainLayout";
-import CareerBlock from "../../components/careerview/CareerBlock";
-import CareerFormBlock from "../../components/careerview/CareerFormBlock";
-import { onLoadData } from "../actions";
+import ContactUsBlock from "../../components/contactus/ContactUsBlock";
 import styles from "./styles.module.scss";
 import store from "../../store";
+import { onLoadData } from "../actions";
 
-const Career = () => {
+const ContuctUs = () => {
   const { route } = useRouter();
   const { dispatch } = store;
   const [data, setData] = useState(null);
-
   useEffect(() => {
     const language = store.getState().certainPageData.certainLangPageData
       ? store.getState().certainPageData.certainLangPageData.lang
@@ -22,15 +20,16 @@ const Career = () => {
 
   if (
     !store.getState().certainPageData.certainLangPageData ||
-    !store.getState().certainPageData.certainLangPageData.career
+    !store.getState().certainPageData.certainLangPageData
   ) {
     return null;
   }
   const topTitleData = store.getState().certainPageData.certainLangPageData;
-  const { career } = store.getState().certainPageData.certainLangPageData;
-  const { vacancyForm } = store.getState().certainPageData.certainLangPageData;
+  const {
+    contactusData,
+  } = store.getState().certainPageData.certainLangPageData;
   return (
-    <MainLayout title="Career Page">
+    <MainLayout title="Contact Us Page">
       <div className="row">
         <div className="col">
           <div
@@ -45,14 +44,16 @@ const Career = () => {
               </div>
               <p className={styles.toppanorama__text}>
                 {topTitleData.topdescript}
+                <span className={styles.toppanorama__text_geoblock}>
+                  <img src="icons/geomark.svg" alt="geomark" />
+                </span>
               </p>
             </div>
           </div>
-          <CareerBlock data={career} />
-          <CareerFormBlock data={vacancyForm} />
+          <ContactUsBlock data={contactusData} />
         </div>
       </div>
     </MainLayout>
   );
 };
-export default Career;
+export default ContuctUs;
