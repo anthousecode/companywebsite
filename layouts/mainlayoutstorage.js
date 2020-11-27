@@ -19,7 +19,7 @@ export const layoutTextData = {
       },
       {
         title: "Связаться с нами",
-        path: "/contuctus",
+        path: "/contactus",
       },
     ],
     singin: "Войти",
@@ -55,8 +55,8 @@ export const layoutTextData = {
         path: "/career",
       },
       {
-        title: "Contuct us",
-        path: "/contuctus",
+        title: "Contact us",
+        path: "/contactus",
       },
     ],
     singin: "Sign in",

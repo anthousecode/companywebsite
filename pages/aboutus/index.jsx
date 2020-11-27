@@ -24,7 +24,7 @@ const AboutUs = () => {
   if (!store.getState().certainPageData.certainLangPageData) {
     return null;
   }
-  const topTileData = store.getState().certainPageData.certainLangPageData;
+  const topTitleData = store.getState().certainPageData.certainLangPageData;
   const { description } = store.getState().certainPageData.certainLangPageData;
   const { ourteam } = store.getState().certainPageData.certainLangPageData;
   return (
@@ -37,12 +37,12 @@ const AboutUs = () => {
             <div className="col-9">
               <div className={styles.toppanorama__titleblock}>
                 <h2 className={styles.toppanorama__titleblock_title}>
-                  {topTileData.toptitle}
+                  {topTitleData.toptitle}
                 </h2>
                 <div className={styles.toppanorama__titleblock_underline}></div>
               </div>
               <p className={styles.toppanorama__text}>
-                {topTileData.topdescript}
+                {topTitleData.topdescript}
               </p>
             </div>
           </div>

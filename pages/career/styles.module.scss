@@ -1,0 +1,24 @@
+.toppanorama {
+  height: 430px;
+  background-image: url("../../public/images/career/toppanoramacareer.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  &__titleblock {
+    color: #fff;
+    display: inline-block;
+    &_title {
+      font-size: 38px;
+      text-transform: uppercase;
+    }
+    &_underline {
+      height: 5px;
+      width: 100%;
+      background-color: #73bcb7;
+    }
+  }
+  &__text {
+    color: #fff;
+    font-size: 16px;
+    margin: 15px 0 30px 0;
+  }
+}
