@@ -67,3 +67,82 @@
     }
   }
 }
+
+.certainvacancy {
+  padding: 80px 0;
+  &__subtitle {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #85bd62;
+    font-weight: bold;
+  }
+  &__maintitleblock {
+    display: inline-block;
+    margin-bottom: 30px;
+    p {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+    div {
+      height: 5px;
+      width: 100%;
+      background-color: #38bdb8;
+    }
+  }
+  &__datablock {
+    margin-bottom: 22px;
+    &_curtitleblock {
+      display: inline-block;
+      margin-bottom: 10px;
+      p {
+        font-size: 16px;
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+      div {
+        height: 5px;
+        width: 100%;
+        background-color: #38bdb8;
+      }
+    }
+    & > p {
+      font-size: 14px;
+      span {
+        font-weight: bold;
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 14px;
+      li {
+        padding-left: 16px;
+        position: relative;
+        line-height: 1.8;
+        span {
+          position: absolute;
+          left: 0;
+          top: 9px;
+          width: 6px;
+          height: 6px;
+          background-color: #38bdb8;
+          border-radius: 50%;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  &__gobackbtn {
+    a {
+      display: inline-block;
+      padding: 10px 20px;
+      color: #fff;
+      background-color: #73bcb7;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}

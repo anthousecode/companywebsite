@@ -35,6 +35,19 @@ export const layoutTextData = {
     phone1: "(067) 487 35 14",
     phone2: "(067) 536 78 95",
     email: "itant.house@gmail.com",
+    signinModal: {
+      title: "Зaполните поля и войдите!",
+      labelinputloginemail: "Логин/эл.почта",
+      labelinputpassword: "Пароль",
+      btnText: "Войти",
+    },
+    fixedModalTexts: {
+      title: "Связаться с нами",
+      placeholdername: "Имя",
+      placeholderemaul: "Эл. почта",
+      placeholderphone: "Телефон (необязательно)",
+      btnText: "Отправить",
+    },
   },
   en: {
     navlinks: [
@@ -72,5 +85,18 @@ export const layoutTextData = {
     phone1: "(067) 487 35 14",
     phone2: "(067) 536 78 95",
     email: "itant.house@gmail.com",
+    signinModal: {
+      title: "Fill fields and sign in!",
+      labelinputloginemail: "Login/email",
+      labelinputpassword: "Password",
+      btnText: "Sign In",
+    },
+    fixedModalTexts: {
+      title: "Contact Us",
+      placeholdername: "Name",
+      placeholderemaul: "Email",
+      placeholderphone: "Phone (optional)",
+      btnText: "Submit",
+    },
   },
 };

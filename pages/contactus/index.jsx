@@ -20,7 +20,7 @@ const ContuctUs = () => {
 
   if (
     !store.getState().certainPageData.certainLangPageData ||
-    !store.getState().certainPageData.certainLangPageData
+    !store.getState().certainPageData.certainLangPageData.contactusData
   ) {
     return null;
   }

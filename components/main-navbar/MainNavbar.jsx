@@ -1,16 +1,23 @@
 import { useState } from "react";
-import Router, { useRouter } from 'next/router'
+import Router, { useRouter } from "next/router";
 import MainNavigation from "./MainNavigation";
+import SigninModal from "./SigninModal";
+import ContactFixedModal from "./ContactFixedModal";
 import { connect } from "react-redux";
 import { onLoadData } from "../../pages/actions";
 import styles from "./styles.module.scss";
 
 const MainNavbar = ({ layoutData, onLoadData }) => {
-  const { route } = useRouter();
+  const router = useRouter();
+  const routeParts = router.route.split("/");
+  const clearRoute = "/" + routeParts[1];
+  const query = Object.values(router.query);
+  const route = !query.length ? clearRoute : clearRoute + "/" + query[0];
   const [lang, setLang] = useState(layoutData.lang);
+  const [signinModal, setSigninModal] = useState(false);
   const onChoiceLang = (e) => {
     if (!e.target.dataset.lang) return;
-    onLoadData(route, e.target.dataset.lang);
+    onLoadData(clearRoute, e.target.dataset.lang);
     setLang(e.target.dataset.lang);
     Router.push(route);
   };
@@ -46,11 +53,19 @@ const MainNavbar = ({ layoutData, onLoadData }) => {
               </span>
             </div>
             <div className={styles.mainnavbarblock__topblock_forsign}>
-              <span>{layoutData.singin}</span>
+              <span onClick={() => setSigninModal(true)}>
+                {layoutData.singin}
+              </span>
             </div>
           </section>
         </div>
         <MainNavigation navlinks={layoutData.navlinks} lang={lang} />
+        <SigninModal
+          signinModal={signinModal}
+          setSigninModal={setSigninModal}
+          modalTexts={layoutData.signinModal}
+        />
+        <ContactFixedModal modalTexts={layoutData.fixedModalTexts} />
       </div>
     </header>
   );

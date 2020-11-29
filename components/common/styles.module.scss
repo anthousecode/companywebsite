@@ -19,3 +19,27 @@
     color: #7b7b7b;
   }
 }
+
+.datablock {
+  margin-bottom: 22px;
+  &_curtitleblock {
+    display: inline-block;
+    margin-bottom: 10px;
+    p {
+      font-size: 16px;
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+    div {
+      height: 5px;
+      width: 100%;
+      background-color: #38bdb8;
+    }
+  }
+  & > p {
+    font-size: 14px;
+    span {
+      font-weight: bold;
+    }
+  }
+}

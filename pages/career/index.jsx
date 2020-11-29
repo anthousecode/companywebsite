@@ -21,8 +21,8 @@ const Career = () => {
   }, [data]);
 
   if (
-    !store.getState().certainPageData.certainLangPageData ||
-    !store.getState().certainPageData.certainLangPageData.career
+    !store.getState().certainPageData.certainLangPageData 
+    || !store.getState().certainPageData.certainLangPageData.career
   ) {
     return null;
   }

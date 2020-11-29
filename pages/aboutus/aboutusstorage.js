@@ -105,7 +105,7 @@ export default {
     topdescript: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     ourteam: {
       title: "Our Team",
-      underTitleText: "Team of leading developers",
+      underTitleText: "Team of leading developers", 
       developers1: [
         {
           name: "Arhtur",

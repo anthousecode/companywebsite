@@ -1,4 +1,4 @@
-import HeaderRow from "../common/HeaderRow";
+import Link from "next/link";
 import styles from "./styles.module.scss";
 
 const BottomPanorama = ({ data }) => {
@@ -19,10 +19,12 @@ const BottomPanorama = ({ data }) => {
             <div className={styles.titlerow__line}></div>
           </section>
           <p className={styles.textrow}>{data.text}</p>
-          <div className={styles.btn}>
-            <span>{data.btnText}</span>
-            <img src="/icons/arrowright.png" alt="arrowright" />
-          </div>
+          <Link href='/contactus'>
+            <div className={styles.btn}>
+              <span>{data.btnText}</span>
+              <img src="/icons/arrowright.png" alt="arrowright" />
+            </div>
+          </Link>
         </div>
         <div className={styles.bottompanorama__wrappone}>
           <div className={styles.bottompanorama__wrapptwo}></div>

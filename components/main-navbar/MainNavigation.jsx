@@ -33,15 +33,14 @@ const MainNavigation = (props) => {
           {navlinks.map((item, index) => (
             <li key={index}>
               <Link href={item.path}>
-                <a
+                <div
                   className={
-                    item.path === route
-                      ? styles.chosenlink
-                      : styles.mainnavbarblock__bottomblock_navlinkslist_link
+                    styles.mainnavbarblock__bottomblock_navlinkslist_link
                   }
                 >
-                  {item.title}
-                </a>
+                  <a>{item.title}</a>
+                  {item.path === route && <span></span>}
+                </div>
               </Link>
             </li>
           ))}
