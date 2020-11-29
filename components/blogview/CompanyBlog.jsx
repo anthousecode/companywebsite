@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Carousel } from "react-bootstrap";
 import HeaderRow from "../common/HeaderRow";
 import BlogSection from "./BlogSection";
+import getDataForCarRender from "../../helpers/getDataForCarRender";
 import styles from "./styles.module.scss";
 
 const CompanyBlog = ({ data }) => {
@@ -9,19 +10,19 @@ const CompanyBlog = ({ data }) => {
   useEffect(() => {
     document.querySelector(".carousel-control-prev").style.width = 0;
     document.querySelector(".blogspanprev").style.position = "absolute";
-    document.querySelector(".blogspanprev").style.bottom = "-50px";
+    document.querySelector(".blogspanprev").style.bottom = "-40px";
     document.querySelector(".blogspanprev").style.left = "30vw";
     document.querySelector(".blogspanprev").style.color = "#000";
     document.querySelector(".blogspanprev").style.display = "block";
 
     document.querySelector(".carousel-control-next").style.width = 0;
     document.querySelector(".blogspannext").style.position = "absolute";
-    document.querySelector(".blogspannext").style.bottom = "-50px";
+    document.querySelector(".blogspannext").style.bottom = "-40px";
     document.querySelector(".blogspannext").style.right = "30vw";
     document.querySelector(".blogspannext").style.color = "#000";
     document.querySelector(".blogspannext").style.display = "block";
   }, []);
-  const blogsItems = Object.values(data.blogs);
+  const blogsItems = getDataForCarRender(data.blogs);
   return (
     <div className="row">
       <div className="col">

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import HeaderRow from "../common/HeaderRow";
 import styles from "./styles.module.scss";
 
@@ -12,7 +13,9 @@ const CareerBlock = ({ data }) => {
               {data.vacancies.map((item, index) => {
                 return (
                   <li key={index}>
-                    <a href="#">{item.name}</a>
+                    <Link href={`/career/${item.id}`}>
+                      <a href="#">{item.name}</a>
+                    </Link>
                   </li>
                 );
               })}
