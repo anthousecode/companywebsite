@@ -16,6 +16,19 @@ const CareerBlock = ({ data }) => {
                     <Link href={`/career/${item.id}`}>
                       <a href="#">{item.name}</a>
                     </Link>
+                    {item.hotVacancy && (
+                      <img
+                        className={styles.vacancylist__fire}
+                        src="icons/fire.svg"
+                        alt="fire"
+                      />
+                    )}
+                    {item.isThereBonus && (
+                      <span className={styles.vacancylist__coins}>
+                        <img src="icons/coins.svg" alt="coins" />
+                        <span>{item.bonusText}</span>
+                      </span>
+                    )}
                   </li>
                 );
               })}

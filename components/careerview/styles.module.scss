@@ -1,5 +1,37 @@
 .vacancylist {
   margin-bottom: 30px;
+  li a {
+    margin-right: 10px;
+  }
+  &__fire {
+    width: 20px;
+    height: 20px;
+  }
+  &__coins {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    img {
+      width: 30px;
+      height: 15px;
+    }
+    span {
+      position: absolute;
+      padding: 5px 10px;
+      border: 1px solid lightgray;
+      font-size: 12px;
+      background-color: #fff;
+      top: 18px;
+      left: 20px;
+      width: max-content;
+      border-radius: 3px;
+      display: none;
+      z-index: 1;
+    }
+  }
+  &__coins:hover span {
+    display: inline-block;
+  }
 }
 
 .vacancyform {

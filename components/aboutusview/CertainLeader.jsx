@@ -19,30 +19,27 @@ const CertainLeader = ({ data }) => {
           <div className="w-50 d-flex justify-content-between">
             <p className="d-flex align-items-center mb-0">
               <span className={styles.icon}>
-                <img src="/images/common/phonewhite.svg" alt="phonewhite" />
+                <img src="icons/phonewhite.svg" alt="phonewhite" />
               </span>
               <span>{data.phone}</span>
             </p>
             <p className="d-flex align-items-center mb-0">
               <span className={styles.icon}>
-                <img src="/images/common/envelopblack.png" alt="envelop" />
+                <img src="icons/envelopblack.png" alt="envelop" />
               </span>
               <span>{data.email}</span>
             </p>
           </div>
           <div className="w-50 d-flex justify-content-end">
             <span className={styles.iconleftfacebook}>
-              <img src="/images/common/facebookwhite.svg" alt="facebookwhite" />
+              <img src="icons/facebookwhite.svg" alt="facebookwhite" />
             </span>
             <span className={styles.iconleft}>
-              <img src="/images/common/skypewhite.svg" alt="skypewhite" />
+              <img src="icons/skypewhite.svg" alt="skypewhite" />
             </span>
             <span className={styles.iconleftin}>in</span>
             <span className={styles.iconleft}>
-              <img
-                src="/images/common/googlepluswhite.png"
-                alt="googlepluswhite"
-              />
+              <img src="icons/googlepluswhite.png" alt="googlepluswhite" />
             </span>
           </div>
         </div>

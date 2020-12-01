@@ -36,6 +36,10 @@ export default {
             "Опыт работы с Angular, Clud Datastore",
             "Предыдущий опыт работы с движком приложений Google",
           ],
+          hotVacancy: true,
+          isThereBonus: true,
+          bonusText:
+            "Вы получите от нас бонус, если поможете нам найти специалиста на эту вакансию",
         },
         {
           id: "vac2",
@@ -66,6 +70,10 @@ export default {
             "Опыт работы с Angular, Clud Datastore",
             "Предыдущий опыт работы с движком приложений Google",
           ],
+          hotVacancy: false,
+          isThereBonus: true,
+          bonusText:
+            "Вы получите от нас бонус, если поможете нам найти специалиста на эту вакансию",
         },
         {
           id: "vac3",
@@ -96,6 +104,10 @@ export default {
             "Опыт работы с Angular, Clud Datastore",
             "Предыдущий опыт работы с движком приложений Google",
           ],
+          hotVacancy: true,
+          isThereBonus: false,
+          bonusText:
+            "Вы получите от нас бонус, если поможете нам найти специалиста на эту вакансию",
         },
         {
           id: "vac4",
@@ -126,6 +138,10 @@ export default {
             "Опыт работы с Angular, Clud Datastore",
             "Предыдущий опыт работы с движком приложений Google",
           ],
+          hotVacancy: false,
+          isThereBonus: false,
+          bonusText:
+            "Вы получите от нас бонус, если поможете нам найти специалиста на эту вакансию",
         },
         {
           id: "vac5",
@@ -156,6 +172,10 @@ export default {
             "Опыт работы с Angular, Clud Datastore",
             "Предыдущий опыт работы с движком приложений Google",
           ],
+          hotVacancy: false,
+          isThereBonus: false,
+          bonusText:
+            "Вы получите от нас бонус, если поможете нам найти специалиста на эту вакансию",
         },
       ],
     },
@@ -180,7 +200,6 @@ export default {
     career: {
       title: "Vacancies",
       underTitleText: "Make your choice now",
-
       vacancies: [
         {
           id: "vac1",
@@ -211,6 +230,10 @@ export default {
             "Experience working Angular, Clud Datastore",
             "Previous experience working woth Google app engine",
           ],
+          hotVacancy: true,
+          isThereBonus: true,
+          bonusText:
+            "You will get a bonus from us if help us to find the specialist for this vacancy",
         },
         {
           id: "vac2",
@@ -241,6 +264,10 @@ export default {
             "Experience working Angular, Clud Datastore",
             "Previous experience working woth Google app engine",
           ],
+          hotVacancy: false,
+          isThereBonus: true,
+          bonusText:
+            "You will get a bonus from us if help us to find the specialist for this vacancy",
         },
         {
           id: "vac3",
@@ -271,6 +298,10 @@ export default {
             "Experience working Angular, Clud Datastore",
             "Previous experience working woth Google app engine",
           ],
+          hotVacancy: true,
+          isThereBonus: false,
+          bonusText:
+            "You will get a bonus from us if help us to find the specialist for this vacancy",
         },
         {
           id: "vac4",
@@ -301,6 +332,10 @@ export default {
             "Experience working Angular, Clud Datastore",
             "Previous experience working woth Google app engine",
           ],
+          hotVacancy: false,
+          isThereBonus: false,
+          bonusText:
+            "You will get a bonus from us if help us to find the specialist for this vacancy",
         },
         {
           id: "vac5",
@@ -330,6 +365,10 @@ export default {
             "Experience working Angular, Clud Datastore",
             "Previous experience working woth Google app engine",
           ],
+          hotVacancy: false,
+          isThereBonus: false,
+          bonusText:
+            "You will get a bonus from us if help us to find the specialist for this vacancy",
         },
       ],
     },

@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import styles from "./styles.module.scss";
 
 const CertainProject = ({ data }) => {
+  const router = useRouter();
+  const { certainProjects } = router.query;
   return (
     <div className="row d-flex justify-content-center">
       <div className="col-9">
@@ -45,7 +48,7 @@ const CertainProject = ({ data }) => {
 
           <p className={styles.certainproject__text}>{data.text}</p>
           <div className={styles.certainproject__gobackbtn}>
-            <Link href="/projectsandproducts">
+            <Link href={`/projectsandproducts/${certainProjects}`}>
               <a>{data.btnGobackText}</a>
             </Link>
           </div>

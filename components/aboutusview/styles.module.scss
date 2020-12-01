@@ -123,6 +123,11 @@
         width: 144px;
         height: 138px;
         margin: 8px 0;
+        transition: 1s;
+        border-radius: 40%;
+      }
+      &_avatar:hover {
+        transform: scale(1.5);
       }
       &_name {
         font-size: 16px;
@@ -138,17 +143,19 @@
         .persondata {
           position: absolute;
           left: -50%;
+          top: 110%;
           background-color: #fff;
           width: 300px;
           padding: 5px;
           border-radius: 5px;
-          border: 1px solid #000;
+          border: 1px solid lightgray;
           z-index: 100;
-          display: none;
+          opacity: 0;
+          transition: 1.5s;
         }
       }
       .imgwrapper:hover .persondata {
-        display: block;
+        opacity: 1;
       }
     }
     &_person:last-child {

@@ -1,12 +1,16 @@
 import { useState, useEffect } from "react";
-import MainLayout from "../../layouts/MainLayout";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import styles from "./styles.module.scss";
-import store from "../../store";
-import { onLoadData } from "../actions";
-import ProjectSection from "../../components/projectsview/ProjectSection";
-import CarouselBlock from "../../components/common/CarouselBlock";
+import store from "../../../store";
+import { onLoadData } from "../../actions";
+import MainLayout from "../../../layouts/MainLayout";
+import ProjectSection from "../../../components/projectsview/ProjectSection";
+import CarouselBlock from "../../../components/common/CarouselBlock";
 
-const ProjectsAndProducts = () => {
+const CertainProjects = () => {
+  const router = useRouter();
+
   const { dispatch } = store;
   const [data, setData] = useState(null);
   useEffect(() => {
@@ -17,16 +21,13 @@ const ProjectsAndProducts = () => {
     setData(language);
   }, [data]);
 
-  if (
-    !store.getState().certainPageData.certainLangPageData ||
-    !store.getState().certainPageData.certainLangPageData.allProjects
-  ) {
-    return null;
-  }
-  const topTileData = store.getState().certainPageData.certainLangPageData;
-  const projectsFolders = Object.values(
+  if (!router.query.certainProjects) return null;
+
+  const allData = store.getState().certainPageData.certainLangPageData;
+  const { certainProjects } = router.query;
+  const projects = Object.values(
     store.getState().certainPageData.certainLangPageData.allProjects
-  );
+  ).find((item) => item.id === certainProjects).projects;
   return (
     <MainLayout title="Projects And Products Page">
       <div className="row">
@@ -37,22 +38,30 @@ const ProjectsAndProducts = () => {
             <div className="col-9">
               <div className={styles.toppanorama__titleblock}>
                 <h2 className={styles.toppanorama__titleblock_title}>
-                  {topTileData.toptitle}
+                  {allData.toptitle}
                 </h2>
                 <div className={styles.toppanorama__titleblock_underline}></div>
               </div>
-              <p className={styles.toppanorama__text}>
-                {topTileData.topdescript}
-              </p>
+              <p className={styles.toppanorama__text}>{allData.topdescript}</p>
             </div>
           </div>
 
-          <CarouselBlock data={projectsFolders}>
+          <CarouselBlock data={projects}>
             <ProjectSection />
           </CarouselBlock>
+
+          <div className="row">
+            <div className="col">
+              <div className={styles.goBackBtn}>
+                <Link href="/projectsandproducts">
+                  <a>{allData.btnGobackText}</a>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </MainLayout>
   );
 };
-export default ProjectsAndProducts;
+export default CertainProjects;

@@ -1,5 +1,3 @@
-import CareerBlock from "./CareerBlock";
-
 import HeaderRow from "../common/HeaderRow";
 import styles from "./styles.module.scss";
 
