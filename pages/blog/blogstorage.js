@@ -9,7 +9,7 @@ export default {
       blogs: [
         {
           id: "bl1",
-          title: "Давно выяснено, что при оценке дизайна",
+          title: "Давно выяснено, что вапыва ваыпвапв ваыпвып при оценке дизайна",
           text:
             "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв.",
           btnText: "Читать больше",
@@ -144,7 +144,7 @@ export default {
       blogs: [
         {
           id: "bl1",
-          title: "Lorem ipsum 111111111 consectetur adipisicing.",
+          title: "Lorem ipsum 111111111 consec fdhfh fhfdh dfdfhf tetur adipisicing.",
           text:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, excepturi ea. Ipsam nihil doloribus sed fugit inventore repellat, similique non. Rem fugit dolores consequatur et laboriosam quo tempora obcaecati consequuntur?",
           btnText: "Read more",

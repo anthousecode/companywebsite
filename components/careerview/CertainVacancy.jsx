@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./styles.module.scss";
 import { connect } from "react-redux";
 import { useRouter } from "next/router";
-import VacancyList from "../common/ValancyList";
+import VacancyList from "../common/VacancyList";
 
 const CertainVacancy = (props) => {
   const descriptionOfVacancy = React.createRef();

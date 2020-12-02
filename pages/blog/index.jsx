@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import MainLayout from "../../layouts/MainLayout";
 import styles from "./styles.module.scss";
 import store from "../../store";
 import { onLoadData } from "../actions";
-import CompanyBlog from "../../components/blogview/CompanyBlog";
+import MainLayout from "../../layouts/MainLayout";
+import HeaderRow from "../../components/common/HeaderRow";
+import BlogSection from "../../components/blogview/BlogSection";
+import CarouselBlock from "../../components/common/CarouselBlock";
 
 const Blog = () => {
   const { route } = useRouter();
@@ -19,7 +21,10 @@ const Blog = () => {
     setData(language);
   }, [data]);
 
-  if (!store.getState().certainPageData.certainLangPageData) {
+  if (
+    !store.getState().certainPageData.certainLangPageData ||
+    !store.getState().certainPageData.certainLangPageData.companyblog
+  ) {
     return null;
   }
   const topTitleData = store.getState().certainPageData.certainLangPageData;
@@ -43,7 +48,15 @@ const Blog = () => {
               </p>
             </div>
           </div>
-          <CompanyBlog data={companyblog} />
+
+          <HeaderRow
+            title={companyblog.title}
+            text={companyblog.underTitleText}
+          />
+
+          <CarouselBlock data={companyblog.blogs}>
+            <BlogSection />
+          </CarouselBlock>
         </div>
       </div>
     </MainLayout>

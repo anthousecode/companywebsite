@@ -12,7 +12,17 @@ const MainNavbar = ({ layoutData, onLoadData }) => {
   const routeParts = router.route.split("/");
   const clearRoute = "/" + routeParts[1];
   const query = Object.values(router.query);
-  const route = !query.length ? clearRoute : clearRoute + "/" + query[0];
+  const route = !query.length
+    ? clearRoute
+    : query.length === 1
+    ? clearRoute + "/" + query[0]
+    : clearRoute + "/" + query[0] + "/" + query[1];
+  const routeLength = Object.keys(router.query).length;
+  const folder = !routeLength
+    ? "icons"
+    : routeLength === 1
+    ? "../icons"
+    : "../../icons";
   const [lang, setLang] = useState(layoutData.lang);
   const [signinModal, setSigninModal] = useState(false);
   const onChoiceLang = (e) => {
@@ -41,7 +51,7 @@ const MainNavbar = ({ layoutData, onLoadData }) => {
               >
                 Eng
               </span>
-              <img src="/images/common/glob.svg" alt="glob" />
+              <img src={`${folder}/glob.svg`} alt="glob" />
               <span
                 className={`${
                   layoutData.lang === "ru" &&

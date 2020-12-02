@@ -7,6 +7,8 @@ import { onLoadData } from "../../pages/actions";
 const MainNavigation = (props) => {
   const { navlinks, lang, onLoadData } = props;
   const { route } = useRouter();
+  const routeParts = route.split("/");
+  const clearNavRoute = "/" + routeParts[1];
   return (
     <div
       className={`${styles.mainnavbarblock__bottomblock} d-flex justify-content-center align-items-center bg-light row mx-0`}
@@ -39,7 +41,7 @@ const MainNavigation = (props) => {
                   }
                 >
                   <a>{item.title}</a>
-                  {item.path === route && <span></span>}
+                  {item.path === clearNavRoute && <span></span>}
                 </div>
               </Link>
             </li>

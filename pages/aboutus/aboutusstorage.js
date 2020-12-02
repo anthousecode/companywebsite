@@ -9,6 +9,8 @@ export default {
         {
           name: "Артур",
           ocupation: "Full stack разработчик",
+          photo:
+            "https://cdn.fishki.net/upload/post/201406/06/1275504/40-of-the-most-amazing-humans-met-on-the-streets-by-the-humans-of-movement-worldwide34__700.jpg",
         },
         {
           name: "Денис",
@@ -105,11 +107,13 @@ export default {
     topdescript: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     ourteam: {
       title: "Our Team",
-      underTitleText: "Team of leading developers", 
+      underTitleText: "Team of leading developers",
       developers1: [
         {
           name: "Arhtur",
           ocupation: "Full stack developer",
+          photo:
+            "https://cdn.fishki.net/upload/post/201406/06/1275504/40-of-the-most-amazing-humans-met-on-the-streets-by-the-humans-of-movement-worldwide34__700.jpg",
         },
         {
           name: "Denis",

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import MainLayout from "../../layouts/MainLayout";
-import CertainProject from "../../components/projectsview/CertainProject";
-import store from "../../store";
-import { onLoadData } from "../actions";
+import MainLayout from "../../../layouts/MainLayout";
+import CertainProject from "../../../components/projectsview/CertainProject";
+import store from "../../../store";
+import { onLoadData } from "../../actions";
 
 const certainProject = () => {
   const { dispatch } = store;
@@ -16,19 +16,18 @@ const certainProject = () => {
     dispatch(onLoadData("/projectsandproducts", language));
     setData(language);
   }, [data]);
-  const { certainProject } = router.query;
+  const { certainProjects, certainProject } = router.query;
   if (
     !store.getState().certainPageData.certainLangPageData ||
-    !store.getState().certainPageData.certainLangPageData.projects ||
+    !store.getState().certainPageData.certainLangPageData.allProjects ||
     !certainProject
   ) {
     return null;
   }
-  const certainData = store
-    .getState()
-    .certainPageData.certainLangPageData.projects.find(
-      (elem) => elem.id === certainProject
-    );
+  const certainProjectsData = Object.values(
+    store.getState().certainPageData.certainLangPageData.allProjects
+  ).find((elem) => elem.id === certainProjects);
+  const certainData = certainProjectsData.projects.find(item => item.id === certainProject);
   return (
     <MainLayout title="Certain Project/Product Page">
       <CertainProject data={certainData} />
