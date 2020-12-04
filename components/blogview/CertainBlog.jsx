@@ -22,12 +22,10 @@ const CertainBlog = ({ data }) => {
           {data.videoUrl && (
             <div className={styles.certainblog__video}>
               <iframe
-                width="560"
-                height="480"
                 src={data.videoUrl}
+                allow="autoplay; encrypted-media"
+                allowfullscreen=""
                 frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
               ></iframe>
             </div>
           )}

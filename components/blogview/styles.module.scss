@@ -89,6 +89,11 @@
     clear: both;
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
+    iframe {
+      width: 560px;
+      height: 480px;
+    }
   }
   &__gobackbtn {
     clear: both;
