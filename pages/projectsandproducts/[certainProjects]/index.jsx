@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import styles from "./styles.module.scss";
 import store from "../../../store";
-import { onLoadData } from "../../actions";
+import { onLoadData } from "../../actionsPages";
 import MainLayout from "../../../layouts/MainLayout";
 import ProjectSection from "../../../components/projectsview/ProjectSection";
 import CarouselBlock from "../../../components/common/CarouselBlock";

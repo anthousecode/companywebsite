@@ -4,10 +4,11 @@ import MainNavigation from "./MainNavigation";
 import SigninModal from "./SigninModal";
 import ContactFixedModal from "./ContactFixedModal";
 import { connect } from "react-redux";
-import { onLoadData } from "../../pages/actions";
+import { onLoadData, onSignOut } from "../../pages/actionsPages";
 import styles from "./styles.module.scss";
 
-const MainNavbar = ({ layoutData, onLoadData }) => {
+const MainNavbar = (props) => {
+  const { layoutData, onLoadData, onSignOut, isSigned, isUserSigned } = props;
   const router = useRouter();
   const routeParts = router.route.split("/");
   const clearRoute = "/" + routeParts[1];
@@ -30,6 +31,10 @@ const MainNavbar = ({ layoutData, onLoadData }) => {
     onLoadData(clearRoute, e.target.dataset.lang);
     setLang(e.target.dataset.lang);
     Router.push(route);
+  };
+  const signOut = () => {
+    onSignOut();
+    Router.push("/");
   };
   return (
     <header className={`${styles.mainnavbarblock} row`}>
@@ -63,9 +68,13 @@ const MainNavbar = ({ layoutData, onLoadData }) => {
               </span>
             </div>
             <div className={styles.mainnavbarblock__topblock_forsign}>
-              <span onClick={() => setSigninModal(true)}>
-                {layoutData.singin}
-              </span>
+              {isSigned || isUserSigned ? (
+                <span onClick={signOut}>{layoutData.singout}</span>
+              ) : (
+                <span onClick={() => setSigninModal(true)}>
+                  {layoutData.singin}
+                </span>
+              )}
             </div>
           </section>
         </div>
@@ -84,9 +93,11 @@ const MainNavbar = ({ layoutData, onLoadData }) => {
 const mapState = (state) => {
   return {
     layoutData: state.certainPageData.certainLayoutLangTextData,
+    isSigned: state.certainPageData.isSigned,
+    isUserSigned: state.certainPageData.isUserSigned,
   };
 };
 
-const mapDispatch = { onLoadData };
+const mapDispatch = { onLoadData, onSignOut };
 
 export default connect(mapState, mapDispatch)(MainNavbar);

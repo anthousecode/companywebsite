@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import MainLayout from "../../layouts/MainLayout";
 import store from "../../store";
-import { onLoadData } from "../actions";
+import { onLoadData } from "../actionsPages";
 import CertainVacancy from "../../components/careerview/CertainVacancy";
 
 const certainVacancy = () => {
@@ -27,7 +27,7 @@ const certainVacancy = () => {
   return (
     <MainLayout title="Blog Page">
       <div className="row d-flex justify-content-center">
-        <div className="col-9 p-0">
+        <div className="col-sm-9">
           <CertainVacancy />
         </div>
       </div>

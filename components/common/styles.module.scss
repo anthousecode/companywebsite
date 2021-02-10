@@ -43,8 +43,52 @@
     }
   }
 }
-
-
-.carouseblock{
+.carouseblock {
   padding-bottom: 60px;
+}
+
+.admininputtext,
+.admintextarea {
+  label,
+  input,
+  textarea {
+    display: block;
+  }
+  label {
+    margin: 10px 0 0 0;
+  }
+  input {
+    width: 50%;
+  }
+  textarea {
+    width: 90%;
+  }
+}
+.adminsavebtn {
+  button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    width: auto;
+    background-color: #73bcb7;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 20px;
+    border: none;
+    outline: none;
+  }
+  span {
+    color: green;
+  }
+}
+
+@media (max-width: 576px) {
+  .headerrow {
+    &__headerline {
+      display: none;
+    }
+    &__headertitle {
+      white-space: normal;
+    }
+  }
 }

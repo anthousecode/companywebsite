@@ -1,7 +1,7 @@
 import ErrorLayout from "../../layouts/ErrorLayout";
 import Router from "next/router";
 import store from "../../store";
-import { onLoadData } from "../actions";
+import { onLoadData } from "../actionsPages";
 import styles from "./styles.module.scss";
 
 const Error404 = () => {

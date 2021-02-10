@@ -66,6 +66,7 @@
     border: 1px dashed grey;
     margin-bottom: 20px;
     label {
+      text-align: center;
       width: 100%;
       height: 100%;
       display: flex;
@@ -176,5 +177,12 @@
     a:hover {
       text-decoration: none;
     }
+  }
+}
+
+
+@media(max-width: 768px){
+  .vacancylist__coins:hover span{
+    display: none;
   }
 }

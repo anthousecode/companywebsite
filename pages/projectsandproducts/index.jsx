@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import MainLayout from "../../layouts/MainLayout";
 import styles from "./styles.module.scss";
 import store from "../../store";
-import { onLoadData } from "../actions";
+import { onLoadData } from "../actionsPages";
 import ProjectSection from "../../components/projectsview/ProjectSection";
 import CarouselBlock from "../../components/common/CarouselBlock";
 
@@ -24,9 +24,7 @@ const ProjectsAndProducts = () => {
     return null;
   }
   const topTileData = store.getState().certainPageData.certainLangPageData;
-  const projectsFolders = Object.values(
-    store.getState().certainPageData.certainLangPageData.allProjects
-  );
+  const projectsFolders = store.getState().certainPageData.certainLangPageData.allProjects;
   return (
     <MainLayout title="Projects And Products Page">
       <div className="row">

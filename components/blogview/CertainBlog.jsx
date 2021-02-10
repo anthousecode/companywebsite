@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 const CertainBlog = ({ data }) => {
   return (
     <div className="row d-flex justify-content-center">
-      <div className="col-9">
+      <div className="col-lg-9">
         <div className={styles.certainblog}>
           <div className={styles.certainblog__title}>
             <h3>{data.title}</h3>

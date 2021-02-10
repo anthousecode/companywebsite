@@ -1,7 +1,7 @@
 import HeaderRow from "../common/HeaderRow";
 import CertainLeader from "./CertainLeader";
 import styles from "./styles.module.scss";
-import { onChangeShownLead } from "../../pages/actions";
+import { onChangeShownLead } from "../../pages/actionsPages";
 import { connect } from "react-redux";
 
 const Leadership = ({ leadership, onChangeShownLead }) => {
@@ -12,7 +12,7 @@ const Leadership = ({ leadership, onChangeShownLead }) => {
       <div className="col">
         <HeaderRow title={leadership.title} text={leadership.underTitleText} />
         <div className="row d-flex justify-content-center">
-          <div className="col-9">
+          <div className="col-lg-9">
             <section className={styles.leadership__leadersblock}>
               {leadership.leaders.map((leader, index) => {
                 return (

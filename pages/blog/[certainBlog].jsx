@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import MainLayout from "../../layouts/MainLayout";
 import store from "../../store";
-import { onLoadData } from "../actions";
+import { onLoadData } from "../actionsPages";
 import CertainBlog from "../../components/blogview/CertainBlog";
 
 const certainBlog = () => {

@@ -8,7 +8,7 @@ const CareerBlock = ({ data }) => {
       <div className="col">
         <HeaderRow title={data.title} text={data.underTitleText} />
         <div className="row d-flex justify-content-center">
-          <div className="col-9">
+          <div className="col-sm-9">
             <ul className={styles.vacancylist}>
               {data.vacancies.map((item, index) => {
                 return (

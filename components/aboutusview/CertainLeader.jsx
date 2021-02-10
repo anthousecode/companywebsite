@@ -16,8 +16,8 @@ const CertainLeader = ({ data }) => {
         </p>
 
         <div className={styles.leadership__leaderdata_data_bottom}>
-          <div className="w-50 d-flex justify-content-between">
-            <p className="d-flex align-items-center mb-0">
+          <div className="d-flex justify-content-between">
+            <p className="d-flex align-items-center mb-0 mr-2">
               <span className={styles.icon}>
                 <img src="icons/phonewhite.svg" alt="phonewhite" />
               </span>
@@ -30,7 +30,7 @@ const CertainLeader = ({ data }) => {
               <span>{data.email}</span>
             </p>
           </div>
-          <div className="w-50 d-flex justify-content-end">
+          <div className="d-flex justify-content-end">
             <span className={styles.iconleftfacebook}>
               <img src="icons/facebookwhite.svg" alt="facebookwhite" />
             </span>

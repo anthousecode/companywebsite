@@ -40,7 +40,7 @@ const CarouselBlock = ({ data, children }) => {
   const items = getDataForCarRender(data);
   return (
     <div className={`${styles.carouseblock} row d-flex justify-content-center`}>
-      <div className="col-9">
+      <div className="col-lg-9">
         <Carousel
           indicators={false}
           interval={null}

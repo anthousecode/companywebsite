@@ -15,7 +15,7 @@ const ContactUsBlock = ({ data }) => {
         <HeaderRow title={data.title} text={data.underTitleText} />
 
         <div className="row d-flex justify-content-center">
-          <div className="col-9">
+          <div className="col-lg-9">
             <form className={styles.contactform}>
               <section className={styles.contactform__topinputblock}>
                 <label htmlFor="subject">{formTexts.labelinputsubject}</label>

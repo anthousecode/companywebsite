@@ -7,7 +7,7 @@ const CareerFormBlock = ({ data }) => {
       <div className="col">
         <HeaderRow title={data.title} text={data.underTitleText} />
         <div className="row d-flex justify-content-center">
-          <div className="col-9">
+          <div className="col-md-9">
             <form className={styles.vacancyform}>
               <section className={styles.vacancyform__name}>
                 <label htmlFor="vacancydetails">

@@ -8,8 +8,8 @@ const Features = ({ data }) => {
         <HeaderRow title={data.title} text={data.underTitleText} />
 
         <div className="row featuresblock d-flex justify-content-center">
-          <div className="col-9">
-            <div className="row py-4">
+          <div className="col-lg-9">
+            <div className="row py-4 px-2">
               {data.first.map((item, index) => (
                 <FeatureLinkBlock key={index} item={item} />
               ))}

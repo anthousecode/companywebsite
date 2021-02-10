@@ -12,12 +12,7 @@ const DevsRow = ({ data }) => {
                 src={item.photo ? item.photo : "images/aboutus/avatarplace.png"}
                 alt="avatarplace"
               />
-              <p className={styles.persondata}>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Accusamus dolorem, laudantium possimus omnis recusandae magni
-                alias, molestias voluptatum dolores minima eligendi corrupti
-                eaque! Assumenda eos, ipsam nihil vero sed laudantium?
-              </p>
+              <p className={styles.persondata}>{item.persondata}</p>
             </div>
             <p className={styles.ourteam__devsrowblock_person_name}>
               {item.name}
