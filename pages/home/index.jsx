@@ -3,7 +3,7 @@ import MainLayout from "../../layouts/MainLayout";
 import Features from "../../components/homepageview/Features";
 import OurProjects from "../../components/homepageview/OurProjects";
 import BottomPanorama from "../../components/homepageview/BottomPanorama";
-import { onLoadData } from "../actions";
+import { onLoadData } from "../actionsPages";
 import { connect } from "react-redux";
 import styles from "./styles.module.scss";
 

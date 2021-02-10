@@ -10,7 +10,7 @@ const Description = ({ data }) => {
       <div className="col">
         <HeaderRow title={data.title} text={data.underTitleText} />
         <div className="row d-flex justify-content-center">
-          <section className="col-9">
+          <section className="col-lg-9">
             <p>{data.text}</p>
           </section>
         </div>

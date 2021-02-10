@@ -2,21 +2,14 @@ import React, { useEffect } from "react";
 import HeaderRow from "../common/HeaderRow";
 import styles from "./styles.module.scss";
 import onMoveCarousel from "../../helpers/onMoveCarousel";
+import getImagesWidths from "../../helpers/getImagesWidths";
 
 const OurProjects = ({ data }) => {
   const pictureswrappers = React.createRef();
   const projectscarouselwrap = React.createRef();
   const getCarouselWidth = () => {
-    const updatedWidth = parseFloat(
-      window.getComputedStyle(projectscarouselwrap.current).width
-    );
-    const blockWidth = updatedWidth * 0.32;
-    const marginright = blockWidth * 0.08;
-    [...pictureswrappers.current.children].forEach((item) => {
-      item.style.width = blockWidth + "px";
-      item.style.marginRight = marginright + "px";
-    });
-    onMoveCarousel("", pictureswrappers, projectscarouselwrap);
+    getImagesWidths(pictureswrappers, projectscarouselwrap);
+    onMoveCarousel(null, pictureswrappers, projectscarouselwrap);
   };
   useEffect(() => {
     getCarouselWidth();
@@ -24,27 +17,30 @@ const OurProjects = ({ data }) => {
     return () => {
       removeEventListener("resize", getCarouselWidth);
     };
-  }, []);
+  }, [projectscarouselwrap]);
   const { carouselImages } = data;
   return (
     <div className="row">
       <div className="col">
         <HeaderRow title={data.title} text={data.underTitleText} />
         <div className="row d-flex justify-content-center">
-          <div className="col-9">
+          <div className="col-lg-9">
             <section
               className={styles.projectscarousel}
               ref={projectscarouselwrap}
             >
               {carouselImages.length > 3 && (
                 <div
-                  onClick={() => onMoveCarousel("arrowleftcarousel", pictureswrappers, projectscarouselwrap)}
+                  onClick={() =>
+                    onMoveCarousel(
+                      "arrowleftcarousel",
+                      pictureswrappers,
+                      projectscarouselwrap
+                    )
+                  }
                   className={styles.projectscarousel__arrowleftblock}
                 >
-                  <img
-                    src="images/home/arrowleftcarousel.svg"
-                    alt="arrowleftcarousel"
-                  />
+                  <img src="images/home/arrowleftcarousel.svg" alt="arrowleft" />
                 </div>
               )}
 
@@ -54,7 +50,9 @@ const OurProjects = ({ data }) => {
               >
                 {carouselImages.map((img) => (
                   <div
-                    className={styles.projectscarousel__pictureswrappers_pictureblock}
+                    className={
+                      styles.projectscarousel__pictureswrappers_pictureblock
+                    }
                     key={img.src}
                   >
                     <img src={img.src} />
@@ -64,10 +62,16 @@ const OurProjects = ({ data }) => {
 
               {carouselImages.length > 3 && (
                 <div
-                  onClick={() => onMoveCarousel("arrowrightcarousel", pictureswrappers, projectscarouselwrap)}
+                  onClick={() =>
+                    onMoveCarousel(
+                      "arrowrightcarousel",
+                      pictureswrappers,
+                      projectscarouselwrap
+                    )
+                  }
                   className={styles.projectscarousel__arrowrightblock}
                 >
-                  <img src="images/home/arrowrightcarousel.svg" alt="arrowrightcarousel" />
+                  <img src="images/home/arrowrightcarousel.svg" alt="arrowright" />
                 </div>
               )}
             </section>
@@ -76,11 +80,23 @@ const OurProjects = ({ data }) => {
               {carouselImages.length > 3 && (
                 <>
                   <span
-                    onClick={() => onMoveCarousel("arrowleftcarousel", pictureswrappers, projectscarouselwrap)}
+                    onClick={() =>
+                      onMoveCarousel(
+                        "arrowleftcarousel",
+                        pictureswrappers,
+                        projectscarouselwrap
+                      )
+                    }
                     className={styles.projectscarouseldots__dot}
                   ></span>
                   <span
-                    onClick={() => onMoveCarousel("arrowrightcarousel", pictureswrappers, projectscarouselwrap)}
+                    onClick={() =>
+                      onMoveCarousel(
+                        "arrowrightcarousel",
+                        pictureswrappers,
+                        projectscarouselwrap
+                      )
+                    }
                     className={styles.projectscarouseldots__dot}
                   ></span>
                 </>

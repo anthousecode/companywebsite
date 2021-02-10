@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 
 const BlogSection = ({ data }) => {
   return (
-    <section className={`${styles.blogblock} col`}>
+    <section className={`${styles.blogblock} col-md-6`}>
       <div className={styles.blogblock__title}>
         <p>{data.title}</p>
         <div></div>

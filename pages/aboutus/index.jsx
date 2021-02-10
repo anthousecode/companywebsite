@@ -4,7 +4,7 @@ import MainLayout from "../../layouts/MainLayout";
 import Description from "../../components/aboutusview/Description";
 import Leadership from "../../components/aboutusview/Leadership";
 import OurTeam from "../../components/aboutusview/OurTeam";
-import { onLoadData } from "../actions";
+import { onLoadData } from "../actionsPages";
 import styles from "./styles.module.scss";
 import store from "../../store";
 

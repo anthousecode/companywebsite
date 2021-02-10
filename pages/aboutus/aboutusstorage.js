@@ -5,42 +5,56 @@ export default {
     ourteam: {
       title: "Наша команда",
       underTitleText: "Команда главных разработчиков",
-      developers1: [
+      developers: [
         {
           name: "Артур",
           ocupation: "Full stack разработчик",
           photo:
             "https://cdn.fishki.net/upload/post/201406/06/1275504/40-of-the-most-amazing-humans-met-on-the-streets-by-the-humans-of-movement-worldwide34__700.jpg",
+          persondata:
+            'Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке',
         },
         {
           name: "Денис",
           ocupation: "Back end разработчик",
+          persondata:
+            'Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке',
         },
         {
           name: "Александр",
           ocupation: "Full stack разработчик",
+          persondata:
+            'Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке',
         },
         {
           name: "Сергей",
           ocupation: "Android разработчик",
+          persondata:
+            'Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке',
         },
-      ],
-      developers2: [
         {
           name: "Анастасия",
           ocupation: "Дизайнер",
+          persondata:
+            'Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке',
         },
         {
           name: "Руслан",
           ocupation: "SEO эксперт",
+          persondata:
+            'Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке',
         },
         {
           name: "Евгений",
           ocupation: "Back end разработчик",
+          persondata:
+            'Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке',
         },
         {
           name: "Михаил",
           ocupation: "Sales менеджер",
+          persondata:
+            'Многие программы электронной вёрстки и редакторы HTML используют Lorem Ipsum в качестве текста по умолчанию, так что поиск по ключевым словам "lorem ipsum" сразу показывает, как много веб-страниц всё ещё дожидаются своего настоящего рождения. За прошедшие годы текст Lorem Ipsum получил много версий. Некоторые версии появились по ошибке',
         },
       ],
     },
@@ -78,23 +92,6 @@ export default {
       ],
     },
     lang: "ru",
-    proсesses: [
-      {
-        title: "Как мы работаем",
-        text:
-          "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона и прочие вещи.",
-      },
-      {
-        title: "Что мы делаем",
-        text:
-          "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона и прочие вещи.",
-      },
-      {
-        title: "Наш процесс",
-        text:
-          "Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона и прочие вещи.",
-      },
-    ],
     description: {
       title: "Описание",
       underTitleText: "Общие сведения о компаниии",
@@ -108,42 +105,56 @@ export default {
     ourteam: {
       title: "Our Team",
       underTitleText: "Team of leading developers",
-      developers1: [
+      developers: [
         {
           name: "Arhtur",
           ocupation: "Full stack developer",
           photo:
             "https://cdn.fishki.net/upload/post/201406/06/1275504/40-of-the-most-amazing-humans-met-on-the-streets-by-the-humans-of-movement-worldwide34__700.jpg",
+          persondata:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus dolorem, laudantium possimus omnis recusandae magnialias, molestias voluptatum dolores minima eligendi corruptieaque! Assumenda eos, ipsam nihil vero sed laudantium?",
         },
         {
           name: "Denis",
           ocupation: "Back end developer",
+          persondata:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus dolorem, laudantium possimus omnis recusandae magnialias, molestias voluptatum dolores minima eligendi corruptieaque! Assumenda eos, ipsam nihil vero sed laudantium?",
         },
         {
           name: "Alex",
           ocupation: "Full stack developer",
+          persondata:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus dolorem, laudantium possimus omnis recusandae magnialias, molestias voluptatum dolores minima eligendi corruptieaque! Assumenda eos, ipsam nihil vero sed laudantium?",
         },
         {
           name: "Sergey",
           ocupation: "Android developer",
+          persondata:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus dolorem, laudantium possimus omnis recusandae magnialias, molestias voluptatum dolores minima eligendi corruptieaque! Assumenda eos, ipsam nihil vero sed laudantium?",
         },
-      ],
-      developers2: [
         {
           name: "Anastasia",
           ocupation: "Designer",
+          persondata:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus dolorem, laudantium possimus omnis recusandae magnialias, molestias voluptatum dolores minima eligendi corruptieaque! Assumenda eos, ipsam nihil vero sed laudantium?",
         },
         {
           name: "Ruslan",
           ocupation: "SEO expert",
+          persondata:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus dolorem, laudantium possimus omnis recusandae magnialias, molestias voluptatum dolores minima eligendi corruptieaque! Assumenda eos, ipsam nihil vero sed laudantium?",
         },
         {
           name: "Evgeniy",
           ocupation: "Back end developer",
+          persondata:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus dolorem, laudantium possimus omnis recusandae magnialias, molestias voluptatum dolores minima eligendi corruptieaque! Assumenda eos, ipsam nihil vero sed laudantium?",
         },
         {
           name: "Mihail",
           ocupation: "Sales",
+          persondata:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus dolorem, laudantium possimus omnis recusandae magnialias, molestias voluptatum dolores minima eligendi corruptieaque! Assumenda eos, ipsam nihil vero sed laudantium?",
         },
       ],
     },
@@ -181,23 +192,6 @@ export default {
       ],
     },
     lang: "en",
-    proсesses: [
-      {
-        title: "How we do",
-        text:
-          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of esing Lorem Ipsum is that it has a more-or-less normal distribution.",
-      },
-      {
-        title: "What we do",
-        text:
-          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of esing Lorem Ipsum is that it has a more-or-less normal distribution.",
-      },
-      {
-        title: "Our process",
-        text:
-          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of esing Lorem Ipsum is that it has a more-or-less normal distribution.",
-      },
-    ],
     description: {
       title: "Description",
       underTitleText: "Common data about company",

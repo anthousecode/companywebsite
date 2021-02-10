@@ -3,7 +3,7 @@ import RightFooterBlock from "./RightFooterBlock";
 import { connect } from "react-redux";
 import styles from "./styles.module.scss";
 
-const MainFooter = ({layoutData}) => {
+const MainFooter = ({ layoutData }) => {
   if (!layoutData) return null;
   return (
     <footer className={`${styles.footer} row`}>
@@ -15,7 +15,7 @@ const MainFooter = ({layoutData}) => {
         <div
           className={`${styles.footer__mainbock} row d-flex justify-content-center`}
         >
-          <section className="col-9 px-0 text-light">
+          <section className="col-lg-9 text-light">
             <div className="row mx-0">
               <LeftFooterBlock data={layoutData} />
               <RightFooterBlock data={layoutData} />
@@ -34,5 +34,3 @@ const mapState = (state) => {
 };
 
 export default connect(mapState)(MainFooter);
-
-

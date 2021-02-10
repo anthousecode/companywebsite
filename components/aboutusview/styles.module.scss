@@ -38,6 +38,7 @@
       width: 70%;
       position: relative;
       padding-bottom: 30px;
+      padding-left: 10px;
       &_name {
         font-size: 16px;
         text-transform: uppercase;
@@ -141,21 +142,20 @@
       .imgwrapper {
         position: relative;
         .persondata {
+          display: none;
           position: absolute;
           left: -50%;
           top: 110%;
           background-color: #fff;
-          width: 300px;
+          width: 200%;
           padding: 5px;
           border-radius: 5px;
           border: 1px solid lightgray;
-          z-index: 100;
-          opacity: 0;
-          transition: 1.5s;
         }
       }
       .imgwrapper:hover .persondata {
-        opacity: 1;
+        display: block;
+        z-index: 10;
       }
     }
     &_person:last-child {
@@ -164,5 +164,67 @@
   }
   &__devsrowblock:last-child {
     border-bottom: none;
+  }
+}
+
+@media (max-width: 780px) {
+  .ourteam__devsrowblock{
+    flex-wrap: wrap;
+    &_person {
+      width: 50%;
+    }
+    &_person:nth-child(even){
+      border-right: none;
+    }
+  }
+  .ourteam__devsrowblock
+  .leadership__leaderdata {
+    &_avatar {
+      width: 35%;
+    }
+    &_data {
+      width: 65%;
+      &_bottom div:first-child {
+        flex-direction: column;
+      }
+    }
+  }
+}
+@media (max-width: 680px) {
+  .leadership__leaderdata {
+    flex-direction: column;
+    &_avatar {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    &_data {
+      width: 100%;
+      &_bottom div:first-child {
+        flex-direction: row;
+      }
+      &_name,
+      &_ocupation {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+@media(max-width: 576px){
+  .ourteam__devsrowblock{
+    border: none;
+    &_person {
+      width: 100%;
+      border: none;
+    }
+  }
+}
+@media (max-width: 510px) {
+  .leadership__leaderdata_data {
+    width: 100%;
+    &_bottom div:first-child {
+      flex-direction: column;
+    }
   }
 }

@@ -7,7 +7,7 @@ const CertainProject = ({ data }) => {
   const { certainProjects } = router.query;
   return (
     <div className="row d-flex justify-content-center">
-      <div className="col-9">
+      <div className="col-lg-9">
         <div className={styles.certainproject}>
           <p className={styles.certainproject__subtitle}>{data.subtitle}</p>
 

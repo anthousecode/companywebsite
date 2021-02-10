@@ -12,7 +12,7 @@ const ProjectSection = ({ data }) => {
     ? `/projectsandproducts/${certainProjects}/${data.id}`
     : `/projectsandproducts/${data.id}`;
   return (
-    <section className={`${styles.projectsection} col`}>
+    <section className={`${styles.projectsection} col-md-6`}>
       <p className={styles.projectsection__subtitle}>{data.subtitle}</p>
       <div className={styles.projectsection__title}>
         <p>{data.title}</p>

@@ -21,8 +21,17 @@ export const layoutTextData = {
         title: "Связаться с нами",
         path: "/contactus",
       },
+      {
+        title: "Административная страница",
+        path: "/adminpage",
+      },
+      {
+        title: "Моя страница",
+        path: "/userpage",
+      },
     ],
     singin: "Войти",
+    singout: "Выйти",
     lang: "ru",
     titles: {
       cntUs: "Связаться с нами",
@@ -72,8 +81,17 @@ export const layoutTextData = {
         title: "Contact us",
         path: "/contactus",
       },
+      {
+        title: "Admin page",
+        path: "/adminpage",
+      },
+      {
+        title: "My page",
+        path: "/userpage",
+      },
     ],
     singin: "Sign in",
+    singout: "Sign out",
     lang: "en",
     titles: {
       cntUs: "Contact us",

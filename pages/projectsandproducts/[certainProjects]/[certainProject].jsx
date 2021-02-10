@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import MainLayout from "../../../layouts/MainLayout";
 import CertainProject from "../../../components/projectsview/CertainProject";
 import store from "../../../store";
-import { onLoadData } from "../../actions";
+import { onLoadData } from "../../actionsPages";
 
 const certainProject = () => {
   const { dispatch } = store;

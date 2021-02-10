@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import MainLayout from "../../layouts/MainLayout";
 import CareerBlock from "../../components/careerview/CareerBlock";
 import CareerFormBlock from "../../components/careerview/CareerFormBlock";
-import { onLoadData } from "../actions";
+import { onLoadData } from "../actionsPages";
 import styles from "./styles.module.scss";
 import store from "../../store";
 

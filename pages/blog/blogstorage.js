@@ -1,5 +1,5 @@
 export default {
-  ru: {
+  ru: { 
     lang: "ru",
     toptitle: "Наши новости",
     topdescript: "Давно выяснено, что при оценке дизайна есть читаемый текст.",

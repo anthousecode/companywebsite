@@ -1,5 +1,5 @@
-export default {
-  projectsPHP: {
+export default [
+  {
     id: "php",
     subtitle: "Projects on PHP",
     title: "Lorem ipsum dolor",
@@ -163,7 +163,7 @@ export default {
       },
     ],
   },
-  projectsJS: {
+  {
     id: "js",
     subtitle: "Projects on JS",
     title: "Lorem ipsum dolor",
@@ -327,7 +327,7 @@ export default {
       },
     ],
   },
-  projectsPYTHON: {
+  {
     id: "python",
     subtitle: "Projects on PYTHON",
     title: "Lorem ipsum dolor",
@@ -491,7 +491,7 @@ export default {
       },
     ],
   },
-  projectsILLUSTRATIONS: {
+  {
     id: "illustrations",
     subtitle: "Illustrations",
     title: "Lorem ipsum dolor",
@@ -655,7 +655,7 @@ export default {
       },
     ],
   },
-  projectsDESIGNS: {
+  {
     id: "design",
     subtitle: "Designs",
     title: "Lorem ipsum dolor",
@@ -819,7 +819,7 @@ export default {
       },
     ],
   },
-  projectsJAVA: {
+  {
     id: "java",
     subtitle: "Projects on JAVA",
     title: "Lorem ipsum dolor",
@@ -983,7 +983,7 @@ export default {
       },
     ],
   },
-  projectsREACT: {
+  {
     id: "react",
     subtitle: "Projects on REACT",
     title: "Lorem ipsum dolor",
@@ -1147,7 +1147,7 @@ export default {
       },
     ],
   },
-  projectsOTHERS: {
+  {
     id: "others",
     subtitle: "Others",
     title: "Lorem ipsum dolor",
@@ -1311,4 +1311,4 @@ export default {
       },
     ],
   },
-};
+];

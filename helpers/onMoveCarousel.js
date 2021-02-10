@@ -11,11 +11,24 @@ const onMoveCarousel = (direction, block, projectscarouselwrap) => {
   const updatedWidth = parseFloat(
     window.getComputedStyle(projectscarouselwrap.current).width
   );
-  const blockWidth = updatedWidth * 0.35;
-  const maxRight = wrapperWidth - blockWidth * 3;
+  let blockWidth, maxRight;
+  if (window.innerWidth > 730) {
+    blockWidth = updatedWidth * 0.35;
+    maxRight = wrapperWidth - blockWidth * 3;
+  } else if (window.innerWidth < 730 && window.innerWidth >= 576) {
+    blockWidth = updatedWidth * 0.55;
+    maxRight = wrapperWidth - blockWidth * 2;
+  } else if (window.innerWidth < 576) {
+    blockWidth = updatedWidth;
+    maxRight = wrapperWidth - blockWidth * 1;
+  }
+
   if (!direction) {
     block.current.style.right = 0 + "px";
-  } else if (direction === "arrowleftcarousel" && Math.trunc(wrapperRight) <= 0) {
+  } else if (
+    direction === "arrowleftcarousel" &&
+    Math.trunc(wrapperRight) <= 0
+  ) {
     return;
   } else if (direction === "arrowrightcarousel" && maxRight <= wrapperRight) {
     return;

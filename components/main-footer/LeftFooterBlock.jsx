@@ -9,7 +9,7 @@ const LeftFooterBlock = ({ data }) => {
     ? "../icons"
     : "../../icons";
   return (
-    <div className="col-5 pl-0">
+    <div className="col-md-5 pl-0">
       <h3 className={styles.footer__mainbock_title}>{data.titles.cntUs}</h3>
       <div className={styles.footer__mainbock_data}>
         <p className="d-flex align-items-center mb-0 mr-3">

@@ -1,3 +1,13 @@
+@mixin underlineSpan {
+  display: inline-block;
+  width: 100%;
+  height: 5px;
+  background-color: #73bcb7;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
 .mainnavbarblock {
   position: sticky;
   top: 0;
@@ -7,6 +17,8 @@
   &__topblock {
     height: 35px;
     background-color: #73bcb7;
+    position: relative;
+    z-index: 5;
     &_lang span,
     &_forsign span {
       cursor: pointer;
@@ -19,55 +31,99 @@
   &__bottomblock {
     height: 106px;
     background-color: #fff;
-    &_logotitle {
-      font-size: 24px;
-      font-weight: 600;
-      cursor: pointer;
-      padding-left: 70px;
-      font-size: 32px;
-      padding-bottom: 8px;
-      span:first-child {
-        color: #73bcb7;
-      }
-      &_vertline {
-        display: inline-block;
-        width: 4px;
-        height: 36px;
-        background-color: #000;
-        align-self: center;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 0;
+      &__logotitle {
         display: flex;
-        margin-left: 2px;
-        span:last-child {
-          background-color: #73bcb7;
+        justify-content: center;
+        font-size: 24px;
+        font-weight: 600;
+        padding-left: 70px;
+        font-size: 32px;
+        span:first-child {
+          color: #73bcb7;
+        }
+        div {
+          display: flex;
+          cursor: pointer;
+          .vertline {
+            display: inline-block;
+            width: 4px;
+            height: 36px;
+            background-color: #000;
+            align-self: center;
+            display: flex;
+            margin-left: 2px;
+            span:last-child {
+              background-color: #73bcb7;
+            }
+          }
+        }
+        img {
+          cursor: pointer;
+          display: none;
         }
       }
-    }
-    &_navlinkslist {
-      list-style: none;
-      li {
-        margin-left: 28px;
-        line-height: 1;
+      &__navlinkslist {
+        list-style: none;
         display: flex;
-        align-items: center;
-      }
-      &_link,
-      &_link:hover {
-        display: inline-block;
-        cursor: pointer;
-        position: relative;
-        a {
-          color: #6e6e6e;
-          text-decoration: none;
-          font-size: 14px;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        li {
+          margin-left: 28px;
+          line-height: 1;
+          display: flex;
+          align-items: center;
         }
-        span {
+        &_link,
+        &_link:hover {
           display: inline-block;
-          width: 100%;
-          height: 5px;
-          background-color: #73bcb7;
-          position: absolute;
-          bottom: -10px;
-          left: 0;
+          cursor: pointer;
+          position: relative;
+          a {
+            color: #6e6e6e;
+            text-decoration: none;
+            font-size: 14px;
+          }
+          span {
+            @include underlineSpan;
+          }
+        }
+      }
+      &__navmobilelinkslist {
+        display: none;
+        list-style: none;
+        margin: -250px 0 0 0;
+        padding: 10px;
+        width: 100%;
+        position: absolute;
+        background-color: #f8f9fa;
+        li {
+          line-height: 1;
+          display: flex;
+          align-items: center;
+          padding: 5px 0;
+          div,
+          div:hover {
+            position: relative;
+            width: 100%;
+            a,
+            a:hover {
+              color: #6e6e6e;
+              text-decoration: none;
+              font-size: 24px;
+            }
+            span {
+              @include underlineSpan;
+            }
+          }
+        }
+        li:active {
+          background-color: lightgray;
         }
       }
     }
@@ -127,6 +183,9 @@
     font-weight: bold;
     font-size: 24px;
     cursor: pointer;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
   }
   &__title {
     font-size: 24px;
@@ -149,5 +208,47 @@
     outline: none;
     color: #fff;
     padding: 5px 15px;
+  }
+}
+
+@media (max-width: 750px) {
+  .mainnavbarblock {
+    &__bottomblock {
+      height: auto;
+      .navbar {
+        padding: 0;
+        &__logotitle {
+          padding: 10px 15px;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          background-color: #f8f9fa;
+          z-index: 4;
+          img {
+            display: block;
+          }
+        }
+        &__navlinkslist {
+          display: none;
+        }
+        &__navmobilelinkslist {
+          display: block;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .fixedmodal {
+    display: none;
+  }
+  .signinform {
+    &__login input {
+      width: 100%;
+    }
+    &__password input {
+      width: 100%;
+    }
   }
 }

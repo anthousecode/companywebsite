@@ -4,7 +4,7 @@ import MainLayout from "../../layouts/MainLayout";
 import ContactUsBlock from "../../components/contactus/ContactUsBlock";
 import styles from "./styles.module.scss";
 import store from "../../store";
-import { onLoadData } from "../actions";
+import { onLoadData } from "../actionsPages";
 
 const ContuctUs = () => {
   const { route } = useRouter();

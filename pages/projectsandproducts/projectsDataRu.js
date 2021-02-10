@@ -1,5 +1,5 @@
-export default {
-  projectsPHP: {
+export default [
+  {
     id: "php",
     subtitle: "Проекты на PHP",
     title: "Какие-то проекты тут",
@@ -166,7 +166,7 @@ export default {
       },
     ],
   },
-  projectsJS: {
+  {
     id: "js",
     subtitle: "Проекты на JS",
     title: "Какие-то проекты тут",
@@ -331,7 +331,7 @@ export default {
       },
     ],
   },
-  projectsPYTHON: {
+  {
     id: "python",
     subtitle: "Проекты на PYTHON",
     title: "Какие-то проекты тут",
@@ -497,7 +497,7 @@ export default {
       },
     ],
   },
-  projectsILLUSTRATIONS: {
+  {
     id: "illustrations",
     subtitle: "Иллюстрации",
     title: "Какие-то иллюстрации",
@@ -662,7 +662,7 @@ export default {
       },
     ],
   },
-  projectsDESIGNS: {
+  {
     id: "design",
     subtitle: "Дизайны",
     title: "Какие-то дизайны",
@@ -828,7 +828,7 @@ export default {
       },
     ],
   },
-  projectsJAVA: {
+  {
     id: "java",
     subtitle: "Проекты на JAVA",
     title: "Какие-то проекты тут",
@@ -994,7 +994,7 @@ export default {
       },
     ],
   },
-  projectsREACT: {
+  {
     id: "react",
     subtitle: "Проекты на REACT",
     title: "Какие-то проекты тут",
@@ -1159,7 +1159,7 @@ export default {
       },
     ],
   },
-  projectsOTHERS: {
+  {
     id: "others",
     subtitle: "Другое",
     title: "Что-то в другом",
@@ -1324,4 +1324,4 @@ export default {
       },
     ],
   },
-};
+];
