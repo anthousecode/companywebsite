@@ -34,7 +34,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 было жесто задана эл.почта и пароль: 
 email: test1@gmail.com
 password: 111111
-чтоб смотреть, пока не готова серверная часть
+чтоб посмотреть переход на админстраницу и саму админстраницу, пока не готова серверная часть. В остальных случаях будет переход на страницу ползователя.
 Эти данные записаны в двух файлах:
 - SigninModal.vue;
 - reducerPages.js
