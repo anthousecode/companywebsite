@@ -28,3 +28,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+На день завершения верстки админстраницы для демонстрации перехода на админстраницу
+было жесто задана эл.почта и пароль: 
+email: test1@gmail.com
+password: 111111
+чтоб смотреть, пока не готова серверная часть
+Эти данные записаны в двух файлах:
+- SigninModal.vue;
+- reducerPages.js
